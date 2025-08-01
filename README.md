@@ -47,25 +47,25 @@ An end-to-end ML pipeline prototype for financial fraud detection.
 ```bash
 git clone https://github.com/Tkachenko-Denis/fraud-detection-pipeline.git
 cd fraud-detection-pipeline
-```bash
+```
 
 ### Create a virtual environment and install dependencies
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-```bash
+```
 ### Run the pipeline manually
 ```bash
 python src/ingest_data.py
 python src/process_data_spark.py
 python src/train_model.py
 python src/monitor_data_quality.py
-```bash
+```
 ### Run the pipeline with Airflow
 ```bash
 airflow standalone
-```bash
+```
 ⚠️ Important: Update the dags_folder path in your airflow.cfg file to point to the folder containing the DAG.
 Then, open http://localhost:8080 and activate the fraud_detection_pipeline DAG.
 
