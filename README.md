@@ -1,65 +1,71 @@
 # Fraud Detection Data Pipeline
 
-Прототип end-to-end ML-пайплайна для детекции финансового мошенничества
+An end-to-end ML pipeline prototype for financial fraud detection.
 
-## Цели проекта
+## Project Objectives
 
-- Смоделировать рабочий процесс Data Engineer / ML Engineer:
-  - Сбор данных транзакций (ingestion)
-  - Очистка, проверка качества и генерация фичей
-  - Обучение модели для выявления мошенничества
-  - Мониторинг качества данных и метрик модели
-  - Оркестрация процесса в Airflow
-- Продемонстрировать навыки:
+- Simulate a real-world Data Engineer / ML Engineer workflow:
+  - Collect transaction data (ingestion)
+  - Perform data cleaning, quality checks, and feature generation
+  - Train a machine learning model to detect fraudulent transactions
+  - Monitor data quality and model performance
+  - Orchestrate the entire process using Airflow
+- Demonstrate expertise in:
   - **Python, PySpark, scikit-learn**
-  - **ETL-процессы, Data Quality**
-  - **ML lifecycle orchestration (Airflow)**
-  - **Проектирование решений, масштабируемых на Azure**
+  - **ETL processes and Data Quality**
+  - **ML lifecycle orchestration with Airflow**
+  - **Designing scalable solutions for Azure**
 
 ---
 
-## Архитектура проекта
+## Project Architecture
 
-```mermaid
-flowchart TD
-    A[Ingestion: CSV -> Parquet] --> B[Processing: PySpark Cleaning & Features]
-    B --> C[Model Training: Logistic Regression]
-    C --> D[Monitoring: Data Quality & Metrics Check]
-    D -->|Airflow DAG| E[End-to-End Pipeline]
+1. **Data Ingestion:** Load transaction data from CSV → Parquet  
+2. **Data Processing:** Clean and transform data with PySpark, generate features  
+3. **Model Training:** Train a logistic regression model for fraud detection  
+4. **Monitoring:** Validate data quality and track model metrics  
+5. **Orchestration:** Schedule and manage the full pipeline with Airflow  
 
-## Технологии проекта
+---
+
+## Tech Stack
+
 - **Python 3.10+**
-- **Pandas, PySpark – обработка данных**
-- **scikit-learn – обучение модели**
-- ** Great Expectations – проверки качества данных**
-- ** Apache Airflow – оркестрация пайплайна** 
-- ** Jupyter Notebook – EDA и визуализация**
-- ** Parquet, csv – форматы хранения данных**
+- **Pandas, PySpark** – data processing
+- **scikit-learn** – model training
+- **Great Expectations** – data quality checks
+- **Apache Airflow** – pipeline orchestration
+- **Jupyter Notebook** – exploratory data analysis and visualization
+- **Parquet, CSV** – data storage formats
 
-## Установка и запуск
-Linux
-Клонировать репозиторий:
+---
 
+## Installation and Usage
+
+### Clone the repository
+
+```bash
 git clone https://github.com/Tkachenko-Denis/fraud-detection-pipeline.git
 cd fraud-detection-pipeline
+```bash
 
-Создать виртуальное окружение и установить зависимости:
-
+### Create a virtual environment and install dependencies
+```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-
-Выполнить пайплайн вручную:
-
+```bash
+### Run the pipeline manually
+```bash
 python src/ingest_data.py
 python src/process_data_spark.py
 python src/train_model.py
 python src/monitor_data_quality.py
-
-Запустить Airflow:
-
+```bash
+### Run the pipeline with Airflow
+```bash
 airflow standalone
-
-Важно! В файле airflow.cfg нужно поменять путь в dags_folder на тот, в котором хранится DAG 
-Открыть http://localhost:8080 и активировать DAG fraud_detection_pipeline. 
+```bash
+⚠️ Important: Update the dags_folder path in your airflow.cfg file to point to the folder containing the DAG.
+Then, open http://localhost:8080 and activate the fraud_detection_pipeline DAG.
 
