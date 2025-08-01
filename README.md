@@ -7,7 +7,7 @@ An end-to-end ML pipeline prototype for financial fraud detection.
 - Simulate a Data Engineer workflow:
   - Collect transaction data
   - Perform data cleaning, quality checks, and feature generation
-  - Train a machine learning model to detect fraudulent transactions
+  - Train machine learning model to detect fraudulent transactions
   - Monitor data quality and model performance
   - Orchestrate the entire process using Airflow
 - Demonstrate expertise in:
