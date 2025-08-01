@@ -18,7 +18,7 @@ An end-to-end ML pipeline prototype for financial fraud detection.
 
 ---
 
-## Project Architecture
+## Architecture
 
 1. **Data Ingestion:** Load transaction data from CSV → Parquet  
 2. **Data Processing:** Clean and transform data with PySpark, generate features  
