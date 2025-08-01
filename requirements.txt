@@ -1,0 +1,18 @@
+# main
+pandas
+numpy
+pyarrow
+fastparquet
+pytest
+matplotlib
+seaborn
+
+# Spark
+pyspark
+
+# Machine Learning
+scikit-learn
+
+# orchestration
+apache-airflow
+
