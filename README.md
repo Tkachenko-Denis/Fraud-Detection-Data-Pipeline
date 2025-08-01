@@ -48,6 +48,8 @@ An end-to-end ML pipeline prototype for financial fraud detection.
 git clone https://github.com/Tkachenko-Denis/fraud-detection-pipeline.git
 cd fraud-detection-pipeline
 ```
+Download the **Credit Card Fraud Detection** [https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud] dataset from Kaggle and save the file as `transactions_sample.csv` in the `data` folder.
+
 
 ### Create a virtual environment and install dependencies
 ```bash
