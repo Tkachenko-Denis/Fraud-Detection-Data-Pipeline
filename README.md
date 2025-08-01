@@ -2,7 +2,7 @@
 
 An end-to-end ML pipeline prototype for financial fraud detection.
 
-## Project Objectives
+## Objectives
 
 - Simulate a Data Engineer workflow:
   - Collect transaction data
