@@ -52,4 +52,14 @@ def monitor_data():
     with open(PREVIOUS_METRICS_PATH, "w") as f:
         json.dump(current_metrics, f, indent=4)
 
-    # --- Result
+    # --- Result ---
+    
+    if issues:
+        print("\n Problems found by monitoring:")
+        for i in issues:
+            print("-", i)
+    else:
+        print(" Monitoring completed, no problems found.")
+
+if __name__ == "__main__":
+    monitor_data()
