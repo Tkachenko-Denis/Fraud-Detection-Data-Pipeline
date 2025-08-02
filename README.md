@@ -12,9 +12,8 @@ An end-to-end ML pipeline prototype for financial fraud detection.
   - Orchestrate the entire process using Airflow
 - Demonstrate expertise in:
   - **Python, PySpark, scikit-learn**
-  - **ETL processes and Data Quality**
+  - **ETL processes**
   - **ML lifecycle orchestration with Airflow**
-  - **Designing scalable solutions for Azure**
 
 ---
 
@@ -33,7 +32,6 @@ An end-to-end ML pipeline prototype for financial fraud detection.
 - **Python 3.10+**
 - **Pandas, PySpark** – data processing
 - **scikit-learn** – model training
-- **Great Expectations** – data quality checks
 - **Apache Airflow** – pipeline orchestration
 - **Jupyter Notebook** – exploratory data analysis and visualization
 - **Parquet, CSV** – data storage formats
