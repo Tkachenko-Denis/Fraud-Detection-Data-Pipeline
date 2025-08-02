@@ -4,8 +4,6 @@ numpy
 pyarrow
 fastparquet
 pytest
-matplotlib
-seaborn
 
 # Spark
 pyspark
@@ -15,4 +13,5 @@ scikit-learn
 
 # orchestration
 apache-airflow
+
 
