@@ -69,3 +69,44 @@ airflow standalone
 ⚠️ Important: Update the dags_folder path in your airflow.cfg file to point to the folder containing the DAG.
 Then, open http://localhost:8080 and activate the fraud_detection_pipeline DAG.
 
+---
+
+## Possible Improvements and Future Enhancements
+This project is an educational prototype. Below are some potential directions to evolve it into a more production-ready solution, aligned with real-world Data/ML engineering practices and Rabobank’s requirements:
+
+### Cloud Deployment (Azure)
+- Store raw and processed data in Azure Blob Storage.
+- Run Spark-based data processing and model training on Azure Databricks clusters.
+- Use Azure Machine Learning for model versioning, deployment, and endpoint management.
+- Integrate Azure Monitor or Application Insights for real-time pipeline health and performance tracking.
+
+## Advanced Logging and Monitoring
+- Implement structured logging via Python’s logging module (INFO, WARNING, ERROR levels).
+- Save historical model metrics in a time-stamped folder (data/metrics_history/) for trend analysis.
+- Set up basic alerts (email, Slack) in case of pipeline failures or model performance degradation.
+
+## Full Test Coverage (Unit & Integration Tests)
+- Extend test coverage to all pipeline steps: ingestion, processing, training, monitoring.
+- Add integration tests for the end-to-end pipeline flow.
+- Use pytest-cov to measure and improve test coverage.
+
+## CI/CD Automation
+- Configure GitHub Actions to:
+  - Run linting (e.g., flake8, black) and unit tests on every pull request.
+  - Build and push a Docker image of the pipeline and Airflow setup.
+  - Enable seamless deployment to cloud or containerized environments.
+
+## Model Evaluation Notebook
+- Add a Jupyter Notebook for deeper analysis of model results:
+  - ROC Curve and Precision-Recall Curve visualizations.
+  - Feature importance or logistic regression coefficients.
+  - Example predictions on real data batches.
+  - This makes model performance easier to interpret and communicate.
+
+## Configuration Management (Optional)
+- Use .yaml or .env configuration files for paths, model hyperparameters, and data sources.
+- Simplifies environment migration (local → cloud).
+
+## Containerization with Docker (Optional)
+- Package the entire pipeline and Airflow services into a Docker Compose setup.
+- Ensures reproducibility and a standardized execution environment.
