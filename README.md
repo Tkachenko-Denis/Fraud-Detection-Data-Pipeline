@@ -33,7 +33,6 @@ An end-to-end ML pipeline prototype for financial fraud detection.
 - **Pandas, PySpark** – data processing
 - **scikit-learn** – model training
 - **Apache Airflow** – pipeline orchestration
-- **Jupyter Notebook** – exploratory data analysis and visualization
 - **Parquet, CSV** – data storage formats
 
 ---
