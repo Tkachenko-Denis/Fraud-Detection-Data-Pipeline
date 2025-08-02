@@ -38,6 +38,32 @@ An end-to-end ML pipeline prototype for financial fraud detection.
 
 ---
 
+## Repository structure
+
+```plaintext
+fraud-detection-pipeline/
+│
+├── README.md
+├── requirements.txt
+├── data/                         # sample data
+│
+├── dags/
+│   └── fraud_pipeline_dag.py     # Airflow DAG
+│
+├── src/
+│   ├── ingest_data.py            # upload data
+│   ├── process_data_spark.py     # processing, cleaning, feature eng.
+│   ├── train_model.py            # training model
+│   └── monitor_data_quality.py   # data quality metrics
+│
+└── tests/
+    └── test_data_processing.py   # unit-tests
+    └── test_model_training.py
+
+```
+
+---
+
 ## Installation and Usage
 
 ### Clone the repository
